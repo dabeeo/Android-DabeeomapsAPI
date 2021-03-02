@@ -76,7 +76,7 @@ compileOptions {
 }
 ```
 
-## 샘플 코드 (Java)
+## 샘플 코드 (Kotlin)
 <details>
 <summary>지도 불러오기</summary>
 
@@ -94,7 +94,7 @@ compileOptions {
 ```
 > Callback 을 생성합니다.
 
-```
+```kotlin
 private val mapCallback: MapCallback = object : MapCallback {
         override fun onSuccess(floors: List<FloorInfo>) {
             floorListAdapter?.setItems(floors)
@@ -118,6 +118,7 @@ private val mapCallback: MapCallback = object : MapCallback {
 
 > MapId 로 지도를 로드합니다.
 
+```kotlin
 mapView.startMapByMapId("mapId", mapCallback)
 ```
 </details>
@@ -129,7 +130,7 @@ mapView.startMapByMapId("mapId", mapCallback)
 
 > 지도 Zoom
 
-```
+```kotlin
 // 현재 Zoom 레벨을 설정합니다.
 // ZoomLevel은 Float형이며 소숫점 2번째 자리에서 반올림합니다.
 mapView.setZoomLevel()
@@ -150,7 +151,7 @@ mapView.setMapTilt()
 
 > 지도 이동/회전
 
-```
+```kotlin
 // 지정된 좌표로 지도중심점을 이동시킵니다.
 mapView.moveTo(x: Double, y: Double, animate: Boolean)
 // 지정된 각도만큼 지도를 회전시킵니다.
@@ -160,7 +161,7 @@ mapView.setAngle(angle: Double, animate: Boolean)
 
 > 층 변경하기
 
-```
+```kotlin
 // 지도의 층을 변경합니다.
 // floorLevel 값은 FloorInfo, Poi 데이터에 포함되어 있습니다. 
 mapView.setFloor(floorLevel)
@@ -168,7 +169,7 @@ mapView.setFloor(floorLevel)
 
 > 지도 모드 변경
 
-```
+```kotlin
 // 지도를 2D/3D 모드로 전환합니다.
 // true : 2D 모드
 // false : 3D 모드
@@ -184,14 +185,14 @@ mapView.setCameraMode(true);
 
 > 사용자 정의 마커
 
-```
+```kotlin
 // 리소스를 이용하여 지도에 사용자 정의 마커를 추가합니다.
 mapView.addMarker(R.drawable.marker, x, y, floorLevel)
 ```
 
 > 마커 제거
 
-```
+```kotlin
 // 지도상에 있는 모든 마커를 제거합니다.
 mapView.removeMarker()
 ```
@@ -204,6 +205,7 @@ mapView.removeMarker()
 
 > Callback 을 생성합니다.
 
+```kotlin
 private val listener = object : IMNavigationListener {
         override fun onPathResult(pathResult: PathResult) {
             // 길찾기 요청이 완료되었을 때 호출됩니다.
@@ -247,7 +249,7 @@ private val listener = object : IMNavigationListener {
     
 > 시작위치와 도착위치 및 이동수단을 지정하여 길찾기를 요청합니다.
 
-```java
+```kotlin
 // 출발 위치와 해당 층을 설정합니다.   
         val startLocation = Location(
             Vector3(startData.x, startData.y, 0.0),
@@ -271,5 +273,4 @@ private val listener = object : IMNavigationListener {
 ```
 </details>
 
-<details>
-<summary>내비게이션 기능</summary>
+
