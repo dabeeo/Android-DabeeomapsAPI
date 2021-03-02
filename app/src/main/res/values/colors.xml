@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorEddie">#000000</color>
+
+    <color name="flame">#e8461d</color>
+    <color name="taupe">#343638</color>
+    <color name="btn_pressed">#ffffff</color>
+    <color name="gray01">#d6d6d6</color>
+    <color name="liver">#4e4e4e</color>
+    <color name="snow">#faf8f7</color>
+    <color name="lsableline">#ededed</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="outerspace">#414141</color>
+
+</resources>

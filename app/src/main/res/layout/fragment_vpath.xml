@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.FragmentMap">
+
+<!--        <fragment-->
+<!--            android:id="@+id/cameraView"-->
+<!--            android:name="com.dabeeo.imsdk.ar.CameraView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+        <com.dabeeo.imsdk.ar.ARView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+
+            <com.dabeeo.imsdk.map.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:frameRate="60.0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:renderMode="RENDER_WHEN_DIRTY" />
+
+            <com.dabeeo.indoormap.views.MaxHeightRecyclerView
+                android:id="@+id/floorRecyclerView"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_round_button"
+                android:maxHeight="@dimen/height_floor_recycler_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/zoomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.dabeeo.indoormap.views.RoundButton
+                    android:id="@+id/zoomInButton"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp" />
+
+                <View
+                    android:id="@+id/zoomButtonUnderline"
+                    android:layout_width="46dp"
+                    android:layout_height="1dp"
+                    android:background="@color/liver" />
+
+                <com.dabeeo.indoormap.views.RoundButton
+                    android:id="@+id/zoomOutButton"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp" />
+
+            </LinearLayout>
+
+            <com.dabeeo.indoormap.views.RoundButton
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/locationButton"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SDKKotlinSample</string>
+
+
+    <string name="term_id">아이디</string>
+    <string name="term_password">비밀번호</string>
+    <string name="term_login">로그인</string>
+    <string name="term_map">지도</string>
+    <string name="term_vpath">VPATH</string>
+
+    <string name="msg_fail_login">로그인 실패</string>
+    <string name="msg_input_keyword">검색어 입력</string>
+
+    <!-- INTENT KEY -->
+    <string name="intent_key_mapId">mapId</string>
+
+</resources>

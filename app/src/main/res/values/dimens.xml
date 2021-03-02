@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="elevation_zoom_round_button">5dp</dimen>
+    <dimen name="height_floor_recycler_view">234dp</dimen>
+
+</resources>

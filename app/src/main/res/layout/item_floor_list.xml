@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.dabeeo.indoormap.views.RoundButton
+            android:id="@+id/floorButton"
+            android:layout_width="46dp"
+            android:layout_height="46dp" />
+
+        <View
+            android:id="@+id/underLineView"
+            android:background="@color/liver"
+            android:layout_width="42dp"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+</layout>
